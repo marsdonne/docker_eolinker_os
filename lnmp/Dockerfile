@@ -10,10 +10,13 @@ RUN apk add --update curl wget;
 # install nginx
 RUN apk add nginx
 RUN mkdir /run/nginx
-RUN mkdir /apps
+RUN mkdir -p /apps/php
+RUN mkdir -p /apps/nginx
+RUN mkdir -p /apps/eolinker_os
 RUN mkdir -p /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/conf.d/
+COPY eolinker_os /apps/eolinker_os/
 EXPOSE 80
 
 # install php
