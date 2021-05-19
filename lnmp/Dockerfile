@@ -16,7 +16,7 @@ RUN mkdir -p /apps/eolinker_os
 RUN mkdir -p /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/conf.d/
-COPY eolinker_os /apps/eolinker_os/
+COPY eolinker_os_5.0 /apps/eolinker_os/
 EXPOSE 80
 
 # install php
