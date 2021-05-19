@@ -4,10 +4,10 @@ nginx;
 php-fpm7;
 
 #init project
-resp=`curl https://api.eolinker.com/openSource/Update/checkout | grep -o 'eolinker_.*zip'`;
-url="http://data.eolinker.com/os/"${resp};
-wget `echo $url` -O $resp;
-unzip $resp -d /apps/eolinker_os;
+# resp=`curl https://api.eolinker.com/openSource/Update/checkout | grep -o 'eolinker_.*zip'`;
+# url="http://data.eolinker.com/os/"${resp};
+# wget `echo $url` -O $resp;
+# unzip $resp -d /apps/eolinker_os;
 chmod -R 777 /apps/eolinker_os/;
 
 # init mysql
